@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".activity.MessageActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout_start_server"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_start_server"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="@drawable/ic_click"
+            style="@style/MaterialAlertDialog.Material3"
+            android:text="@string/start_server" />
+
+        <TextView
+            android:id="@+id/tv_start_server"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:visibility="gone"
+            android:textColor="@color/Red"
+            app:layout_constraintBottom_toBottomOf="@id/btn_start_server" />
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_message"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/edt_Message"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/edt_Message"
+        app:layout_constraintTop_toBottomOf="@id/frameLayout_start_server"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="50dp"
+        android:id="@+id/btn_insert_image"
+        android:layout_height="45dp"
+        android:onClick="onClick"
+        style="@style/MaterialAlertDialog.Material3"
+        android:background="@drawable/ic_click"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_insert_image"
+        android:contentDescription="@string/insert_image" />
+    <EditText
+        android:id="@+id/edt_Message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/message_from_client"
+        android:inputType="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_send"
+        app:layout_constraintStart_toEndOf="@id/btn_insert_image" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_send"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="@string/send_message_to_server"
+        android:background="@drawable/ic_click"
+        style="@style/MaterialAlertDialog.Material3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/edt_Message" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

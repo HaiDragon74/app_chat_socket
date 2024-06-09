@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_user"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    android:background="@drawable/bcr_shape"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/name"
+        android:id="@+id/edt_name"
+        android:textSize="20sp"
+        android:autofillHints="name"
+        android:inputType="none" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/ip_server"
+        android:id="@+id/edt_ip_server"
+        android:textSize="20sp"
+        android:autofillHints="name"
+        android:inputType="none" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="@string/login"
+        style="@style/MaterialAlertDialog.Material3"
+        android:background="@drawable/ic_click"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_login"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

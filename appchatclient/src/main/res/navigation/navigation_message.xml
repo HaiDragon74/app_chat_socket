@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_message"
+    app:startDestination="@id/diaLogUserFragment">
+
+    <dialog
+        android:id="@+id/diaLogUserFragment"
+        android:name="com.remotetechs.appchatclient.fragment.DiaLogUserFragment"
+        android:label="DiaLogUserFragment">
+        <action
+            android:id="@+id/action_diaLogUserFragment_to_messageFragment"
+            app:destination="@id/messageFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.remotetechs.appchatclient.fragment.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message">
+        <argument
+            android:name="user_name"
+            app:nullable="false"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_send_user"
+        android:layout_width="170dp"
+        android:layout_height="200dp"
+        android:scaleType="fitEnd"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/img_send" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_avt_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/linear_item_message_user"
+        android:layout_gravity="center"
+        app:cardCornerRadius="100dp">
+
+        <ImageView
+            android:id="@+id/img_message_user"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/avt_user"
+            android:src="@drawable/ic_avt" />
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_time_item_message_user"
+        android:textSize="11sp"
+        android:layout_marginEnd="2dp"
+        android:layout_toStartOf="@id/cv_avt_user"
+        android:layout_alignBottom="@id/cv_avt_user"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/cv_avt_user"
+        android:layout_marginTop="10dp"
+        android:id="@+id/linear_item_message_user"
+        android:layout_marginStart="20dp"
+        android:padding="5dp"
+        android:layout_below="@id/img_send_user"
+        android:background="@drawable/text_user_shape"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_item_name_user"
+            android:textStyle="bold"
+            android:maxWidth="200dp"
+            android:textColor="@color/Red"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:maxWidth="250dp"
+            android:textColor="@color/white"
+            android:id="@+id/tv_item_message_user"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

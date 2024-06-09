@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_server"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:text="@string/message" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_message_receiver"
+        android:layout_width="match_parent"
+        app:reverseLayout="true"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="50dp"
+            android:id="@+id/btn_insert_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/ic_click"
+            style="@style/MaterialAlertDialog.Material3"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_insert_image"
+            android:contentDescription="@string/insert_image" />
+        <EditText
+            android:id="@+id/edtMessageUser"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/btn_insert_image"
+            app:layout_constraintEnd_toStartOf="@id/btn_send_data"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_toStartOf="@id/btn_send_data"
+            android:autofillHints=""
+            android:maxHeight="200dp"
+            android:hint="@string/message_from_client"
+            android:inputType="none" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_send_data"
+            android:layout_width="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/send_message_to_server"
+            android:background="@drawable/ic_click"
+            style="@style/MaterialAlertDialog.Material3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
